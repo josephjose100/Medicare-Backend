@@ -14,8 +14,7 @@ public class Admin {
 	private String name;
 	private String password;
 	public Admin() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public Admin(int id, String name, String password) {
 		super();

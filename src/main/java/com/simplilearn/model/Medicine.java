@@ -14,12 +14,13 @@ public class Medicine {
 	private String seller;
 	private String description;
 	private int available;
+	private String url;
 	public Medicine() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Medicine(int id, String name, String category, float price, String seller, String description,
-			int available) {
+	public Medicine(int id, String name, String category, float price, String seller, String description, int available,
+			String url) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -28,6 +29,7 @@ public class Medicine {
 		this.seller = seller;
 		this.description = description;
 		this.available = available;
+		this.url = url;
 	}
 	public int getId() {
 		return id;
@@ -71,6 +73,14 @@ public class Medicine {
 	public void setAvailable(int available) {
 		this.available = available;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
+	
 	
 	
 	

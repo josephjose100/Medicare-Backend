@@ -12,8 +12,7 @@ public class Address {
 	private String district;
 	private String state;
 	public Address() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public Address(int id, String houseNo, String locality, String district, String state) {
 		super();

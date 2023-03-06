@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class User {
+public class Users {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,15 +15,17 @@ public class User {
 	private String name;
 	@OneToOne
 	private Address address;
-	public User() {
+	private String password;
+	public Users() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(int id, String name, Address address) {
+	public Users(int id, String name, Address address, String password) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;
+		this.password = password;
 	}
 	public int getId() {
 		return id;
@@ -42,6 +44,12 @@ public class User {
 	}
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
