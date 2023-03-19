@@ -36,7 +36,7 @@ public class Admincontroller {
     @PostMapping(value="/medicine",consumes = {MediaType.APPLICATION_JSON_VALUE,MediaType.MULTIPART_FORM_DATA_VALUE})
 	public void addMedicine(@RequestPart("medicine") String medicine,@RequestPart("file") MultipartFile file) throws IOException
 	{
-    	File file1=new File("/home/joseph/myprojects/"+file.getOriginalFilename()); 
+    	File file1=new File("/home/joseph/angular projects/medicarefrontend/src/assets/"+file.getOriginalFilename()); 
 	    file1.createNewFile();
 	    
 	    try (FileOutputStream fout=new FileOutputStream(file1))
@@ -48,7 +48,7 @@ public class Admincontroller {
 	    	exe.printStackTrace();
 	    }
 	    Medicine newMedicine=medicineservice.getJson(medicine);
-	    newMedicine.setUrl("/home/joseph/myprojects/"+file.getOriginalFilename());
+	    newMedicine.setUrl("assets/"+file.getOriginalFilename());
 		medicineservice.addMedicine(newMedicine);
     }
     

@@ -7,7 +7,7 @@ import com.simplilearn.model.Users;
 
 public interface Userservice {
 	
-	public void registerUser(RegisterUserDto userdto);
+	public void registerUser(Users user);
 	public List<Users> getallUsers();
 	
 	
