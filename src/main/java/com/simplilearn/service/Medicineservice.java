@@ -10,7 +10,7 @@ public interface Medicineservice {
 	public void addMedicine(Medicine medicine);
 	public void deleteMedicine(int id);
 	public void updateMedicine(Medicine medicine);
-	public void enableDisableMedicine(int id,int availability);
+	public void enableDisableMedicine(int id,boolean availability);
 	public Medicine getJson(String medicine);
 	
 }

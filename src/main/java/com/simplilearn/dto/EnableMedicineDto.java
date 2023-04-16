@@ -3,12 +3,12 @@ package com.simplilearn.dto;
 public class EnableMedicineDto {
 
 	int id;
-	int availability;
+	boolean availability;
 	public EnableMedicineDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public EnableMedicineDto(int id, int availability) {
+	public EnableMedicineDto(int id, boolean availability) {
 		super();
 		this.id = id;
 		this.availability = availability;
@@ -19,10 +19,10 @@ public class EnableMedicineDto {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getAvailability() {
+	public boolean getAvailability() {
 		return availability;
 	}
-	public void setAvailability(int availability) {
+	public void setAvailability(boolean availability) {
 		this.availability = availability;
 	}
 	

@@ -26,7 +26,7 @@ public class Medicineserviceimpl implements Medicineservice {
 
 	@Override
 	public void addMedicine(Medicine medicine) {
-		
+		medicine.setAvailable(true);
 		medicinerepository.save(medicine);
 		
 		
@@ -61,7 +61,7 @@ public class Medicineserviceimpl implements Medicineservice {
 	}
 
 	@Override
-	public void enableDisableMedicine(int id,int availability) {
+	public void enableDisableMedicine(int id,boolean availability) {
 		Medicine medicine=medicinerepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + id));
 		medicine.setAvailable(availability);
 		medicinerepository.save(medicine);

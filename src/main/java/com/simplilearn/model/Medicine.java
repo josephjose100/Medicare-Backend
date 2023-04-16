@@ -16,13 +16,13 @@ public class Medicine {
 	private float price;
 	private String seller;
 	private String description;
-	private int available;
+	private boolean available;
 	private String url;
 	public Medicine() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Medicine(int id, String name, String category, float price, String seller, String description, int available,
+	public Medicine(int id, String name, String category, float price, String seller, String description, boolean available,
 			String url) {
 		super();
 		this.id = id;
@@ -70,10 +70,10 @@ public class Medicine {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getAvailable() {
+	public boolean getAvailable() {
 		return available;
 	}
-	public void setAvailable(int available) {
+	public void setAvailable(boolean available) {
 		this.available = available;
 	}
 	public String getUrl() {
