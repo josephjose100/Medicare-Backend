@@ -65,9 +65,9 @@ public class Admincontroller {
     }
     
     @PostMapping("/enable")
-    public void enableDisable(@RequestBody EnableMedicineDto medicinedto)
+    public void enableDisable(@RequestBody Medicine medicine)
     {
-    	medicineservice.enableDisableMedicine(medicinedto.getId(),medicinedto.getAvailability());
+    	medicineservice.enableDisableMedicine(medicine.getId(),medicine.getAvailable());
     }
     
     @GetMapping("/admin")
